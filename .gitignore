@@ -1,0 +1,5 @@
+.omo/
+__pycache__/
+*.pyc
+docker/.env
+*.egg-info/

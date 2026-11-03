@@ -1,0 +1,11 @@
+vad_systems:
+  - name: pyannote
+    endpoint: http://localhost:8011
+
+transcription_systems:
+  - name: whisper
+    endpoint: http://localhost:8002
+  - name: parakeet
+    endpoint: http://localhost:8003
+
+output_format: srt

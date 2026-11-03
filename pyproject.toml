@@ -1,0 +1,26 @@
+[project]
+name = "speech-annotator"
+version = "0.1.0"
+description = "Speech annotation tool: automatic CLI + manual verification GUI"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "httpx>=0.27",
+    "PySide6>=6.7",
+    "pyqtgraph>=0.13.3",
+    "sounddevice>=0.4.6",
+    "soundfile>=0.12.1",
+    "numpy>=1.23",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

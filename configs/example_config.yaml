@@ -1,0 +1,25 @@
+vad_systems:
+  - name: pyannote
+    endpoint: http://localhost:8001
+
+transcription_systems:
+  - name: whisper
+    endpoint: http://localhost:8002
+  - name: parakeet
+    endpoint: http://localhost:8003
+  - name: voxtral
+    type: mistral
+    model: voxtral-mini-latest
+    api_key: ${MISTRAL_API_KEY}
+
+output_format: srt
+
+llm:
+  base_url: https://api.mistral.ai/v1
+  api_key: ${MISTRAL_API_KEY}
+  model: mistral-small-latest
+
+mistral_ocr:
+  api_key: ${MISTRAL_API_KEY}
+  ocr_model: mistral-ocr-latest
+  vision_model: pixtral-12b-latest
